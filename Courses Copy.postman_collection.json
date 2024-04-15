@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "d170c8d3-d453-48a7-bde9-cbfc0172945e",
+		"name": "Courses Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33696602"
+	},
+	"item": [
+		{
+			"name": "Register an account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rut\": \"112223334\",\r\n    \"name\": \"Nombre\",\r\n    \"email\": \"nombre@alumnos.ucn.cl\",\r\n    \"password\": \"password\",\r\n    \"confirmPassword\": \"pasword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api}}/account/register",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"account",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"Francisco@alumnos.ucn.cl\",\r\n    \"password\" : \"lalala123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api}}/account/login",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api",
+			"value": "http://localhost:5000/api",
+			"type": "string"
+		}
+	]
+}
